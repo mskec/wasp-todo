@@ -5,7 +5,11 @@ app wasptodo {
     userEntity: User,
     methods: [EmailAndPassword],
     onAuthFailedRedirectTo: "/login"
-  }
+  },
+
+  dependencies: [
+    ("react-clock", "3.0.0")
+]
 }
 
 route RootRoute { path: "/", to: MainPage }

@@ -4,6 +4,7 @@ import { useQuery } from '@wasp/queries';
 import getTasks from '@wasp/queries/getTasks';
 import createTask from '@wasp/actions/createTask';
 import updateTask from '@wasp/actions/updateTask';
+import Clocks from './Clocks'
 
 const MainPage = (props) => {
 	const { user } = props
@@ -12,6 +13,9 @@ const MainPage = (props) => {
 	return (
 		<main>
 			<h1>Hello world!</h1>
+			
+			<Clocks />
+
 			{JSON.stringify(user)}
 			<NewTaskForm />
 			{tasks && <TasksList tasks={tasks} />}
